@@ -1,0 +1,18 @@
+{
+  "name": "drag-and-drop-quiz",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass scss/main.scss css/styles.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

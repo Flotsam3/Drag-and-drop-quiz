@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="/js/main.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet"> 
+    <title>DAD Quiz</title>
+</head>
+
+<body>
+    <main class="start">
+        <h1>DaD Quizz Challenge</h1>
+        <div class="scene">
+            <div class="cube">
+                <div class="cube__side cube__side--front"><svg><rect></rect></svg>
+                    <button id="button-start">Start
+                    </button>
+                </div>
+                <div class="cube__side cube__side--back">back</div>
+                <div class="cube__side cube__side--right"><svg><rect></rect></svg>
+                    <input type="name" id="name" placeholder="Enter your name">
+                    <button id="button-submit-name">OK</button>
+                </div>
+                <div class="cube__side cube__side--left">left</div>
+                <div class="cube__side cube__side--top"><svg><rect></rect></svg>
+                    <div class="level-selection">
+                        <h4>Choose your level!</h4>
+                        <div class="level-easy">
+                            <input type="radio" name="level" id="easy" value="easy">
+                            <label for="easy">easy</label>
+                        </div>
+                        <div class="level-fair">
+                            <input type="radio" name="level" id="fair" value="fair" checked>
+                            <label for="easy">fair</label>
+                        </div>
+                        <div class="level-challenging">
+                            <input type="radio" name="level" id="challenging" value="challenging">
+                            <label for="easy">challenging</label>
+                        </div>
+                    </div>
+                    <button id="button-submit-level">OK</button>
+                </div>
+                <div class="cube__side cube__side--bottom">bottom</div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
