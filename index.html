@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/main.js" defer></script>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="scss/start.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <script src="js/main.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet"> 
-    <title>DAD Quiz</title>
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <title>DaD Quiz</title>
 </head>
 
 <body>
-    <main class="start">
+    <section class="start">
         <h1>DaD Quizz Challenge</h1>
         <div class="scene">
             <div class="cube">
@@ -27,7 +29,7 @@
                 <div class="cube__side cube__side--left">left</div>
                 <div class="cube__side cube__side--top"><svg><rect></rect></svg>
                     <div class="level-selection">
-                        <h4>Choose your level!</h4>
+                        <h4>Choose your level</h4>
                         <div class="level-easy">
                             <input type="radio" name="level" id="easy" value="easy">
                             <label for="easy">easy</label>
@@ -46,6 +48,13 @@
                 <div class="cube__side cube__side--bottom">bottom</div>
             </div>
         </div>
-    </main>
+    </section>
+        
+    <section class="quiz-info">
+        <div class="pane">
+            <p> Nice to have you here Flotsam, </br></br> during this quiz you will be provided with five terms for each round and your task is to bring all of them into the right order by using drag and drop. </br></br> Each correctly assigned term will earn you five points.</br></br> Your prefered level of dificulty is "fair", therefore you have 30 seconds to accomplish each of the 20 rounds. </br></br></br><span>Have fun!</span></p>
+        </div>
+        <button id="button-info" style="visibility: hidden;">Begin</button>
+    </section>
 </body>
 </html>

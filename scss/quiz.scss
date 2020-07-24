@@ -1,0 +1,124 @@
+$colour-main-dark: #1b262c;
+$colour-main-medium: #0f4c75;
+$colour-main-medium-light: #3282b8;
+$colour-main-light: #bbe1fa;
+$main-font: 'Rubik', sans-serif;
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: $colour-main-medium;
+
+    .header {
+        display: flex;
+        height: 250px;
+        width: 100%;
+        background-color: $colour-main-dark;
+
+        .score {
+            height: 100%;
+            width: 20%;
+            border-right: 2px dashed $colour-main-medium;
+
+            .player {
+                position: relative;
+                background-color: #e44803;
+                width: 100px;
+                height: 70px;
+                margin-left: 180px;
+                margin-top: 40px;
+                border-radius: 10px;
+                position: relative;
+
+                .player-badge {
+                    position: absolute;
+                    top: 45px;
+                    left: 120px;
+                    font-family: $main-font;
+                    font-size: 1.3rem;
+                    color: whitesmoke;
+                }
+            }
+            
+            .player:after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-bottom: 25px solid transparent;
+                border-right: 40px solid #e44803;
+                position: absolute;
+                right: 0;
+            }
+            
+            .player-value {
+                font-family: DINBold, Arial, sans-serif;
+                color: #fff;
+                font-size: 50px;
+                text-align: center;
+                line-height: 62px;
+            }
+
+            .comp {
+                position: relative;
+                background-color: $colour-main-medium-light;
+                width: 100px;
+                height: 70px;
+                margin-left: 50px;
+                margin-top: 10px;
+                border-radius: 10px;
+                position: relative;
+
+                .comp-badge {
+                    position: absolute;
+                    top: 45px;
+                    left: 125px;
+                    font-family: $main-font;
+                    font-size: 1.3rem;
+                    color: whitesmoke;
+                }
+            }
+            
+            .comp:after {
+                content: "";
+                display: block;
+                width: 0;
+                height: 0;
+                border-bottom: 25px solid transparent;
+                border-right: 40px solid $colour-main-medium-light;
+                position: absolute;
+                right: 0;
+            }
+            
+            .comp-value {
+                font-family: DINBold, Arial, sans-serif;
+                color: #fff;
+                font-size: 50px;
+                text-align: center;
+                line-height: 62px;
+            }
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            height: 100%;
+            width: 60%;
+
+            p {
+                margin: 0;
+                padding: 80px 80px;
+                text-align: center;
+                font-family: $main-font;
+                font-size: 1.7rem;
+                color: whitesmoke;
+            }
+        }
+
+        .timer {
+            height: 100%;
+            width: 20%;
+            border-left: 2px dashed $colour-main-medium;
+        }
+    }
+}

@@ -1,0 +1,125 @@
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: #0f4c75;
+}
+
+body .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 250px;
+  width: 100%;
+  background-color: #1b262c;
+}
+
+body .header .score {
+  height: 100%;
+  width: 20%;
+  border-right: 2px dashed #0f4c75;
+}
+
+body .header .score .player {
+  position: relative;
+  background-color: #e44803;
+  width: 100px;
+  height: 70px;
+  margin-left: 180px;
+  margin-top: 40px;
+  border-radius: 10px;
+  position: relative;
+}
+
+body .header .score .player .player-badge {
+  position: absolute;
+  top: 45px;
+  left: 120px;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.3rem;
+  color: whitesmoke;
+}
+
+body .header .score .player:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 25px solid transparent;
+  border-right: 40px solid #e44803;
+  position: absolute;
+  right: 0;
+}
+
+body .header .score .player-value {
+  font-family: DINBold, Arial, sans-serif;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  line-height: 62px;
+}
+
+body .header .score .comp {
+  position: relative;
+  background-color: #3282b8;
+  width: 100px;
+  height: 70px;
+  margin-left: 50px;
+  margin-top: 10px;
+  border-radius: 10px;
+  position: relative;
+}
+
+body .header .score .comp .comp-badge {
+  position: absolute;
+  top: 45px;
+  left: 125px;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.3rem;
+  color: whitesmoke;
+}
+
+body .header .score .comp:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-bottom: 25px solid transparent;
+  border-right: 40px solid #3282b8;
+  position: absolute;
+  right: 0;
+}
+
+body .header .score .comp-value {
+  font-family: DINBold, Arial, sans-serif;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  line-height: 62px;
+}
+
+body .header .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 60%;
+}
+
+body .header .info p {
+  margin: 0;
+  padding: 80px 80px;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.7rem;
+  color: whitesmoke;
+}
+
+body .header .timer {
+  height: 100%;
+  width: 20%;
+  border-left: 2px dashed #0f4c75;
+}
+/*# sourceMappingURL=quiz.css.map */

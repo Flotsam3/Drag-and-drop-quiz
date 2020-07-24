@@ -1,6 +1,7 @@
 const buttonStart = document.querySelector('#button-start');
 const buttonName = document.querySelector('#button-submit-name');
 const buttonLevel = document.querySelector('#button-submit-level');
+const buttonInfo = document.querySelector('#button-info');
 const cube = document.querySelector('.cube');
 const cubeFront = document.querySelector('.cube__side--front');
 const cubeRight = document.querySelector('.cube__side--right');
@@ -9,6 +10,8 @@ const cubeBack = document.querySelector('.cube__side--back');
 const svgRecStart = document.querySelector('.cube__side--front rect');
 const svgRecRight = document.querySelector('.cube__side--right rect');
 const svgRecTop = document.querySelector('.cube__side--top rect');
+const layer = document.querySelector('.layer');
+const quizInfo = document.querySelector('.quiz-info');
 
 buttonStart.addEventListener('click', animateStart);
 
@@ -44,4 +47,13 @@ function animateStartLevel(){
     setTimeout(() => {
         document.querySelector('.start').classList.add('slide-startpage');
     }, 1500);
+    
+    setTimeout(() => {
+        buttonInfo.style.removeProperty('visibility');
+        buttonInfo.addEventListener('click', fadeOut);
+    }, 3000);
+}
+
+function fadeOut(){
+    quizInfo.classList.add('fade-out');
 }
