@@ -64,6 +64,12 @@ body {
                         z-index: 1;
                     }
 
+                    #name::placeholder {
+                        font-size: 1rem;
+                        color: whitesmoke;
+                        opacity: 0.3;
+                    }
+
                     .level-selection {
                         display: flex;
                         flex-direction: column;
@@ -216,7 +222,102 @@ body {
         .button-disabled {
             animation: fade-button 1.5s linear forwards;
         }
+    }
+}
 
+small {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    width: 200px;
+    font-family: $main-font;
+    font-size: 1rem;
+    color: rgba($colour-main-light, $alpha: 0.5);
+}
+
+.quiz-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: $colour-main-medium;
+
+    a {
+        z-index: 1;
+    }
+
+    .pane {
+        height: 550px;
+        width: 400px;
+        background-color: $colour-main-dark;
+        border-radius: 20px;
+
+        p {
+            padding: 40px 20px 20px 20px;
+            font-size: 1.3rem;
+            line-height: 1.5rem;
+            font-family: $main-font;
+            color: rgba($colour-main-light, $alpha: 0.8);
+        }
+
+        span {
+            display: block;
+            text-align: center;
+        }
+    }
+    
+    #button-info {
+        height: 40px;
+        width: 150px;
+        margin-top: 40px;
+        background-color: $colour-main-dark;
+        border: none;
+        -webkit-box-shadow: 0px 0px 0px 5px $colour-main-medium;
+                box-shadow: 0px 0px 0px 5px #3282b8;
+        font-family: "Rubik", sans-serif;
+        font-size: 1.2rem;
+        letter-spacing: 0.1rem;
+        color: #bbe1fa;
+        border-radius: 35px;
+    }
+
+    #button-info:hover {
+        -webkit-box-shadow: 0px 0px 0px 5px #bbe1fa;
+          box-shadow: 0px 0px 0px 5px #bbe1fa;
+    }
+
+    #button-info:focus {
+        outline: 0;
+    }
+}
+
+.--fade-out {
+    animation: fade-out 2s linear forwards;
+}
+
+.--fade-in {
+    z-index: 2;
+    animation: fade-in 3s linear forwards;
+}
+
+@keyframes fade-out {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 

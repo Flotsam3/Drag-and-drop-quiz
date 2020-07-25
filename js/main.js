@@ -1,59 +1,23 @@
-const buttonStart = document.querySelector('#button-start');
-const buttonName = document.querySelector('#button-submit-name');
-const buttonLevel = document.querySelector('#button-submit-level');
-const buttonInfo = document.querySelector('#button-info');
-const cube = document.querySelector('.cube');
-const cubeFront = document.querySelector('.cube__side--front');
-const cubeRight = document.querySelector('.cube__side--right');
-const cubeLeft = document.querySelector('.cube__side--left');
-const cubeBack = document.querySelector('.cube__side--back');
-const svgRecStart = document.querySelector('.cube__side--front rect');
-const svgRecRight = document.querySelector('.cube__side--right rect');
-const svgRecTop = document.querySelector('.cube__side--top rect');
-const layer = document.querySelector('.layer');
-const quizInfo = document.querySelector('.quiz-info');
+const buttonCard = document.querySelector('#button-card')
+const card = document.querySelector('.card__content');
+const solution = document.querySelectorAll('.solution')
 
-buttonStart.addEventListener('click', animateStart);
+buttonCard.addEventListener('click', rotateCard);
 
-function animateStart(){
-    buttonStart.classList.add('button-disabled');
-    svgRecStart.classList.add('dynamic-border');
-    
-    setTimeout(() => {
-        cube.classList.add('right');
-        cubeRight.classList.add('dynamic-border');
-        svgRecRight.classList.add('dynamic-border');
-    }, 500);
-}
-    
-buttonName.addEventListener('click', animateStartName);
-    
-function animateStartName(){
-    buttonName.classList.add('button-disabled');
-    svgRecTop.classList.add('dynamic-border');
-    cube.classList.add('top');
-}
+function rotateCard(){
+    console.log('läuft');
+    card.classList.add('card--rotate');
 
-buttonLevel.addEventListener('click', animateStartLevel);
+    solution.forEach((element, index) => {
 
-function animateStartLevel(){
-    buttonLevel.classList.add('button-disabled');
-    cube.removeChild(cubeFront);
-    cube.removeChild(cubeLeft);
-    cube.removeChild(cubeRight);
-    cube.removeChild(cubeBack);
-    svgRecTop.classList.remove('dynamic-border');
-
-    setTimeout(() => {
-        document.querySelector('.start').classList.add('slide-startpage');
-    }, 1500);
-    
-    setTimeout(() => {
-        buttonInfo.style.removeProperty('visibility');
-        buttonInfo.addEventListener('click', fadeOut);
-    }, 3000);
-}
-
-function fadeOut(){
-    quizInfo.classList.add('fade-out');
+        // if (index === 0) {
+        //     element.style.visibility = "visible";
+        //     element.classList.add('solution--slide');
+        // }
+        
+        setTimeout(() => {
+            element.style.visibility = "visible";
+            element.classList.add('solution--slide');
+        }, 1500 * index);
+    });
 }
