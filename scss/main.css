@@ -154,10 +154,10 @@ body .main .card .card__content {
   position: relative;
   height: 100%;
   width: 100%;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
 }
