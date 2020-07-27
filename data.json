@@ -1,14 +1,14 @@
 [
     {
         "text": "Sort the five countries according to their population, from most populated to least populated!",
-        "options": ["Dublin", "Moscow", "Athens", "Madrid", "Paris"],
-        "solutions": [553.165, "12,38 mil", 664.046, "3,26 mil", "2,14 mil"],
-        "rank": [5, 1, 4, 2, 3]
+        "options": ["Moscow", "Madrid", "Paris", "Athens", "Dublin"],
+        "solutions": ["12,38 mil", "3,26 mil", "2,14 mil", 664.046, 553.165],
+        "rank": [1, 2, 3, 4, 5]
     },
     {
         "text": "Sort these buildings according to their height, from the tallest to the lowest!",
-        "options": ["Shanghai Tower", "Taipei 101", "Burj Khalifa", "Petronas Towers", "Empire State Building"],
-        "solutions": ["632m", "508m", "828m", "452m", "381m"],
-        "rank": [5, 1, 4, 2, 3]
+        "options": ["Burj Khalifa", "Shanghai Tower", "Taipei 101", "Petronas Towers", "Empire State Building"],
+        "solutions": ["828m", "632m", "508m", "452m", "381m"],
+        "rank": [1, 2, 3, 4, 5]
     }
 ]

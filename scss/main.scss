@@ -258,11 +258,57 @@ body {
     animation: slide-solution 2s ease-in-out;
 }
 
+.solution--fade-out {
+    animation: slide-fade-out 1.5s ease-in-out;
+}
+
+.full-house {
+    animation: full-house 2s ease-out;
+}
+
 @keyframes slide-solution {
     0%{
         transform: translateX(1500px);
     }
     100%{
         transform: translateX(0);
+    }
+}
+
+@keyframes slide-fade-out {
+    0%{
+        transform: scale(1) translateX(0)
+        
+    }
+    10%{
+        transform: translateX(20px)
+        
+    }
+    100%{
+        transform: scale(0)
+    }
+}
+
+@keyframes full-house {
+    0%{
+        background-color: #1b262c;
+    }
+    20%{
+        background-color:rgba(221, 164, 7, 1);
+    }
+    40%{
+        background-color: rgba(221, 164, 7, 0.4);
+    }
+    50%{
+        background-color: rgba(221, 164, 7, 0.8);
+    }
+    60%{
+        background-color:rgba(221, 164, 7, 0.4);
+    }
+    70%{
+        background-color:rgba(221, 164, 7, 1);
+    }
+    100%{
+        background-color: #1b262c;
     }
 }
