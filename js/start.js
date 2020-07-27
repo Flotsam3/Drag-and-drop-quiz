@@ -10,11 +10,12 @@ const cubeBack = document.querySelector('.cube__side--back');
 const svgRecStart = document.querySelector('.cube__side--front rect');
 const svgRecRight = document.querySelector('.cube__side--right rect');
 const svgRecTop = document.querySelector('.cube__side--top rect');
-const layer = document.querySelector('.layer');
 const scene = document.querySelector('.scene');
 const pane = document.querySelector('.pane');
 const aTag = document.querySelector('a');
 const small = document.querySelector('small');
+let playerName = "";
+let playerLevel = "";
 
 buttonStart.addEventListener('click', animateStart);
 
@@ -29,7 +30,7 @@ function animateStart(){
         svgRecRight.classList.add('dynamic-border');
     }, 500);
 }
-    
+
 buttonName.addEventListener('click', animateStartName);
 
 function animateStartName(){
@@ -45,34 +46,41 @@ buttonLevel.addEventListener('click', animateStartLevel);
 function animateStartLevel(){
     playerLevel = document.querySelector('input[name = level]:checked').value
     let levelTime = 0;
-
+    
     switch (playerLevel) {
         case 'easy':
             levelTime = 45;
             break;
-        case 'fair':
-            levelTime = 30;
-            break;
-        case 'challenging':
-            levelTime = 20;
-    }
-    
-    buttonLevel.classList.add('button-disabled');
-    cube.removeChild(cubeFront);
-    cube.removeChild(cubeLeft);
-    cube.removeChild(cubeRight);
-    cube.removeChild(cubeBack);
-    svgRecTop.classList.remove('dynamic-border');    
-    scene.classList.add('--fade-out');
-    
-    setTimeout(() => {
-        console.log(playerName);
-        console.log(playerLevel);
-        console.log(levelTime);
-        const introText = document.querySelector('.pane p');
-        introText.innerHTML = `Nice to have you here ${playerName}, </br></br> during this quiz you will be presented with five terms for each round and your task is to bring all of them into the right order by using drag and drop. </br></br> Each correctly assigned term will earn you five points.</br></br> Your prefered level of difficulty is "${playerLevel}", therefore you have ${levelTime} seconds to accomplish each of the 20 rounds. </br></br></br><span>Have fun!</span>`
-        buttonInfo.style.removeProperty('visibility');
-        pane.classList.add('--fade-in');
-        aTag.classList.add('--fade-in');
-    }, 2000);
+            case 'fair':
+                levelTime = 30;
+                break;
+                case 'challenging':
+                    levelTime = 20;
+                }
+                
+                buttonLevel.classList.add('button-disabled');
+                cube.removeChild(cubeFront);
+                cube.removeChild(cubeLeft);
+                cube.removeChild(cubeRight);
+                cube.removeChild(cubeBack);
+                svgRecTop.classList.remove('dynamic-border');    
+                scene.classList.add('--fade-out');
+                
+                setTimeout(() => {
+                    console.log(playerName);
+                    console.log(playerLevel);
+                    console.log(levelTime);
+                    const introText = document.querySelector('.pane p');
+                    introText.innerHTML = `Nice to have you here ${playerName}, </br></br> during this quiz you will be presented with five terms for each round and your task is to bring all of them into the right order by using drag and drop. </br></br> Each correctly assigned term will earn you five points.</br></br> Your prefered level of difficulty is "${playerLevel}", therefore you have ${levelTime} seconds to accomplish each of the 20 rounds. </br></br></br><span>Have fun!</span>`
+                    buttonInfo.style.removeProperty('visibility');
+                    pane.classList.add('--fade-in');
+                    aTag.classList.add('--fade-in');
+
+                    const playerData = [playerName, levelTime];
+                    localStorage.setItem("userData", JSON.stringify(playerData));
+                    
+                    buttonStart.removeEventListener('click', animateStart);
+                    buttonName.removeEventListener('click', animateStartName);
+                    buttonLevel.removeEventListener('click', animateStartLevel);
+                }, 2000);
 }

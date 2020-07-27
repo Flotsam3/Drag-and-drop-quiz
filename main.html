@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="scss/main.css">
     <script src="js/main.js" defer></script>
+    <script src="js/drag-and-drop.js" defer></script>
     <title>DaD quiz</title>
 </head>
 
@@ -22,10 +23,10 @@
             </div>
         </div>
         <div class="info">
-            <p>Sort the five countries according to their population, from most populated to least populated!</p>
+            <p></p>
         </div>
         <div class="timer">
-
+            <span></span>
         </div>
     </header>
     <section class="main">
@@ -34,11 +35,11 @@
                 <div class="card__front">
                 </div>
                 <div class="card__back">
-                    <div class="bar bar1">Moscow<span class="solution">12,38 mil.<span class="number">1</span></span></div>
-                    <div class="bar bar2">Athens<span class="solution">664.046<span class="number">4</span></span></div>
-                    <div class="bar bar3">Paris<span class="solution">2,14 mil.<span class="number">3</span></span></div>
-                    <div class="bar bar4">Madrid<span class="solution">3,26 mil<span class="number">2</span></span></div>
-                    <div class="bar bar5">Dublin<span class="solution">553.165<span class="number">5</span></span></div>
+                    <div class="bar bar1 draggable" draggable = "true"><span class="solution">12,38 mil.<span class="number">1</span></span></div>
+                    <div class="bar bar2 draggable" draggable = "true"><span class="solution">664.046<span class="number">4</span></span></div>
+                    <div class="bar bar3 draggable" draggable = "true"><span class="solution">2,14 mil.<span class="number">3</span></span></div>
+                    <div class="bar bar4 draggable" draggable = "true"><span class="solution">3,26 mil<span class="number">2</span></span></div>
+                    <div class="bar bar5 draggable" draggable = "true"><span class="solution">553.165<span class="number">5</span></span></div>
                 </div>
             </div>
         </div>

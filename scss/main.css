@@ -102,6 +102,9 @@ body .header .info {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -119,9 +122,25 @@ body .header .info p {
 }
 
 body .header .timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
   width: 20%;
   border-left: 3px dashed #0f4c75;
+}
+
+body .header .timer span {
+  font-family: DINBold, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 5rem;
+  color: #3282b8;
 }
 
 body .main {
@@ -207,6 +226,10 @@ body .main .card .card__content .card__front .bar, body .main .card .card__conte
   border-radius: 5px;
 }
 
+body .main .card .card__content .card__front .draggable, body .main .card .card__content .card__back .draggable {
+  cursor: move;
+}
+
 body .main .card .card__content .card__front .solution, body .main .card .card__content .card__back .solution {
   position: absolute;
   left: 350px;
@@ -257,6 +280,10 @@ body .main #button-card:hover {
 
 body .main #button-card:focus {
   outline: 0;
+}
+
+.draggable.dragging {
+  opacity: 0.3;
 }
 
 .card--rotate {

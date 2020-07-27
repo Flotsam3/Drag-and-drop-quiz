@@ -318,7 +318,7 @@ small {
   width: 200px;
   font-family: "Rubik", sans-serif;
   font-size: 1rem;
-  color: rgba(187, 225, 250, 0.5);
+  color: rgba(187, 225, 250, 0.15);
 }
 
 .quiz-info {

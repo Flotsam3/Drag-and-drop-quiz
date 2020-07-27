@@ -102,6 +102,7 @@ body {
 
         .info {
             display: flex;
+            justify-content: center;
             align-items: center;
             height: 100%;
             width: 60%;
@@ -117,9 +118,19 @@ body {
         }
 
         .timer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
             height: 100%;
             width: 20%;
             border-left: 3px dashed $colour-main-medium;
+
+            span {
+                font-family: DINBold, Arial, sans-serif;
+                font-weight: bold;
+                font-size: 5rem;
+                color: $colour-main-medium-light;
+            }
         }
     }
 
@@ -173,6 +184,10 @@ body {
                         border-radius: 5px;
                     }
 
+                    .draggable {
+                        cursor: move;
+                    }
+
                     .solution {
                         position: absolute;
                         left: 350px;
@@ -199,6 +214,8 @@ body {
                 }
                 .card__back {
                     transform: rotateY(180deg);
+
+                    
                 }
             }
         }
@@ -226,7 +243,11 @@ body {
         #button-card:focus {
             outline: 0;
         }
-    }
+    } 
+}
+
+.draggable.dragging {
+    opacity: 0.3;
 }
 
 .card--rotate {
