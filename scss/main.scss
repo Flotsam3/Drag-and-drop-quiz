@@ -121,14 +121,25 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
             height: 100%;
             width: 20%;
             border-left: 3px dashed $colour-main-medium;
 
-            span {
+            .countdown {
                 font-family: DINBold, Arial, sans-serif;
                 font-weight: bold;
                 font-size: 5rem;
+                color: $colour-main-medium-light;
+            }
+
+            .round {
+                position: absolute;
+                left: 5px;
+                bottom: 5px;
+                font-family: DINBold, Arial, sans-serif;
+                font-weight: bold;
+                font-size: 1.8rem;
                 color: $colour-main-medium-light;
             }
         }
@@ -145,7 +156,6 @@ body {
         .card {
             height: 400px;
             width: 350px;
-            // background-color: $colour-main-dark;
             border-radius: 10px;
             perspective: 800px;
 
@@ -156,7 +166,19 @@ body {
                 transition: transform 2s;
                 transform-style: preserve-3d;
 
-                .card__front, .card__back {
+                .card__front {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    position: absolute;
+                    background-color: $colour-main-dark;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 10px;
+                    backface-visibility: hidden;
+                }
+
+                .card__back {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
@@ -212,15 +234,17 @@ body {
                         border-radius: 50%;
                     }
                 }
+                .card__front i {
+                    font-size: 4rem;
+                    color: $colour-main-medium-light;
+                }
                 .card__back {
                     transform: rotateY(180deg);
-
-                    
                 }
             }
         }
 
-        #button-card {
+        .button-card-active {
             height: 40px;
             width: 150px;
             margin-top: 40px;
@@ -235,15 +259,32 @@ body {
             border-radius: 35px;
         }
     
-        #button-card:hover {
+        .button-card-active:hover {
             -webkit-box-shadow: 0px 0px 0px 5px #bbe1fa;
               box-shadow: 0px 0px 0px 5px #bbe1fa;
         }
 
+        .button-card-disabled {
+            height: 40px;
+            width: 150px;
+            margin-top: 40px;
+            background-color: $colour-main-dark;
+            border: none;
+            font-family: "Rubik", sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.1rem;
+            color: #bbe1fa;
+            border-radius: 35px;
+        }
+    
         #button-card:focus {
             outline: 0;
         }
     } 
+}
+
+.hidden {
+   display: none;
 }
 
 .draggable.dragging {

@@ -131,15 +131,26 @@ body .header .timer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
   height: 100%;
   width: 20%;
   border-left: 3px dashed #0f4c75;
 }
 
-body .header .timer span {
+body .header .timer .countdown {
   font-family: DINBold, Arial, sans-serif;
   font-weight: bold;
   font-size: 5rem;
+  color: #3282b8;
+}
+
+body .header .timer .round {
+  position: absolute;
+  left: 5px;
+  bottom: 5px;
+  font-family: DINBold, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.8rem;
   color: #3282b8;
 }
 
@@ -181,7 +192,26 @@ body .main .card .card__content {
           transform-style: preserve-3d;
 }
 
-body .main .card .card__content .card__front, body .main .card .card__content .card__back {
+body .main .card .card__content .card__front {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  background-color: #1b262c;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+body .main .card .card__content .card__back {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -204,7 +234,7 @@ body .main .card .card__content .card__front, body .main .card .card__content .c
           backface-visibility: hidden;
 }
 
-body .main .card .card__content .card__front .bar, body .main .card .card__content .card__back .bar {
+body .main .card .card__content .card__back .bar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,11 +256,11 @@ body .main .card .card__content .card__front .bar, body .main .card .card__conte
   border-radius: 5px;
 }
 
-body .main .card .card__content .card__front .draggable, body .main .card .card__content .card__back .draggable {
+body .main .card .card__content .card__back .draggable {
   cursor: move;
 }
 
-body .main .card .card__content .card__front .solution, body .main .card .card__content .card__back .solution {
+body .main .card .card__content .card__back .solution {
   position: absolute;
   left: 350px;
   visibility: hidden;
@@ -241,7 +271,7 @@ body .main .card .card__content .card__front .solution, body .main .card .card__
   line-height: 2.5rem;
 }
 
-body .main .card .card__content .card__front .number, body .main .card .card__content .card__back .number {
+body .main .card .card__content .card__back .number {
   position: absolute;
   top: 5px;
   left: 10px;
@@ -253,12 +283,17 @@ body .main .card .card__content .card__front .number, body .main .card .card__co
   border-radius: 50%;
 }
 
+body .main .card .card__content .card__front i {
+  font-size: 4rem;
+  color: #3282b8;
+}
+
 body .main .card .card__content .card__back {
   -webkit-transform: rotateY(180deg);
           transform: rotateY(180deg);
 }
 
-body .main #button-card {
+body .main .button-card-active {
   height: 40px;
   width: 150px;
   margin-top: 40px;
@@ -273,13 +308,30 @@ body .main #button-card {
   border-radius: 35px;
 }
 
-body .main #button-card:hover {
+body .main .button-card-active:hover {
   -webkit-box-shadow: 0px 0px 0px 5px #bbe1fa;
   box-shadow: 0px 0px 0px 5px #bbe1fa;
 }
 
+body .main .button-card-disabled {
+  height: 40px;
+  width: 150px;
+  margin-top: 40px;
+  background-color: #1b262c;
+  border: none;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: #bbe1fa;
+  border-radius: 35px;
+}
+
 body .main #button-card:focus {
   outline: 0;
+}
+
+.hidden {
+  display: none;
 }
 
 .draggable.dragging {
