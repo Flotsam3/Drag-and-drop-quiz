@@ -49,6 +49,7 @@ body {
                 border-bottom: 25px solid transparent;
                 border-right: 40px solid #e44803;
                 position: absolute;
+                bottom: -15px;
                 right: 0;
             }
             
@@ -57,7 +58,7 @@ body {
                 color: #fff;
                 font-size: 50px;
                 text-align: center;
-                line-height: 62px;
+                line-height: 70px;
             }
 
             .comp {
@@ -88,6 +89,7 @@ body {
                 border-bottom: 25px solid transparent;
                 border-right: 40px solid $colour-main-medium-light;
                 position: absolute;
+                bottom: -15px;
                 right: 0;
             }
             
@@ -96,7 +98,7 @@ body {
                 color: #fff;
                 font-size: 50px;
                 text-align: center;
-                line-height: 62px;
+                line-height: 70px;
             }
         }
 

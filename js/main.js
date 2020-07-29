@@ -22,7 +22,7 @@ myTimer.textContent = levelTime;
 getExerciseData();
 
 function getExerciseData(){
-    fetch('data.json')
+    fetch('data-demo.json')
     .then((response) => {
         return response.json();
     })
@@ -62,15 +62,17 @@ function getExerciseData(){
                     const averageScore = parseInt(playerScore.textContent) / exerciseData.length;
                     const medalOne = exerciseData.length * 25 * 33 / 100;
                     const medalTwo = exerciseData.length * 25 * 66 / 100;
-
-                    finishedQuiz = true;
                     console.log(medalOne);
                     console.log(medalTwo);
+                    console.log(playerScore.textContent);
+
+                    finishedQuiz = true;
+                    document.querySelector('.book').style.display = "none";
                     buttonCard.style.visibility = "hidden";
                     infoText.textContent = `You did it, you just finished the quiz! You scored ${averageScore} points on average.`;
-                    if (playerScore < medalOne){
+                    if (playerScore.textContent < medalOne){
                         document.querySelector('.medal1').classList.remove('hidden');
-                    } else if (playerScore < medalTwo) {
+                    } else if (playerScore.textContent < medalTwo) {
                         document.querySelector('.medal1').classList.remove('hidden');
                         document.querySelector('.medal2').classList.remove('hidden');
                     } else {

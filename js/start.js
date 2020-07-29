@@ -89,7 +89,7 @@ function animateStartLevel(){
                     aTag.classList.add('--fade-in');
 
                     const playerData = [playerName, levelTime];
-                    localStorage.setItem(playerName, JSON.stringify(playerData));
+                    localStorage.setItem('userData', JSON.stringify(playerData));
                     
                     buttonStart.removeEventListener('click', animateStart);
                     buttonName.removeEventListener('click', animateStartName);
