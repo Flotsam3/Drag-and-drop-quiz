@@ -388,6 +388,19 @@ small {
   outline: 0;
 }
 
+.name-check {
+  -webkit-animation: name-check 1s ease-in-out;
+          animation: name-check 1s ease-in-out;
+}
+
+.hint {
+  position: absolute;
+  font-family: "Rubik", sans-serif;
+  font-size: 0.9rem;
+  color: whitesmoke;
+  visibility: hidden;
+}
+
 .--fade-out {
   -webkit-animation: fade-out 2s linear forwards;
           animation: fade-out 2s linear forwards;
@@ -502,6 +515,60 @@ small {
   100% {
     -webkit-transform: translateX(-2500px);
             transform: translateX(-2500px);
+  }
+}
+
+@-webkit-keyframes name-check {
+  0% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  20% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  40% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  60% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes name-check {
+  0% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  20% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  40% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  60% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  80% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
 }
 /*# sourceMappingURL=start.css.map */

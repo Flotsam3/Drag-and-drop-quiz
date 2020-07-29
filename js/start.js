@@ -34,10 +34,22 @@ function animateStart(){
 buttonName.addEventListener('click', animateStartName);
 
 function animateStartName(){
+    textHint = document.querySelector('.hint');
     playerName = document.querySelector('#name').value;
-    buttonName.classList.add('button-disabled');
-    svgRecTop.classList.add('dynamic-border');
-    cube.classList.add('top');
+    const regex = /^[a-zA-Z]{2,20}$/;
+
+    if (regex.test(playerName)){
+        textHint.style.visibility = "hidden";
+        buttonName.classList.add('button-disabled');
+        svgRecTop.classList.add('dynamic-border');
+        cube.classList.add('top');
+    } else {
+        document.querySelector('#name').classList.add('name-check');
+        textHint.style.visibility = "visible";
+        setTimeout(() => {
+            document.querySelector('#name').classList.remove('name-check');
+        }, 1000);
+    };
 }
 
 buttonLevel.addEventListener('click', animateStartLevel);
@@ -71,13 +83,13 @@ function animateStartLevel(){
                     console.log(playerLevel);
                     console.log(levelTime);
                     const introText = document.querySelector('.pane p');
-                    introText.innerHTML = `Nice to have you here ${playerName}, </br></br> during this quiz you will be presented with five terms for each round and your task is to bring all of them into the right order by using drag and drop. </br></br> Each correctly assigned term will earn you five points.</br></br> Your prefered level of difficulty is "${playerLevel}", therefore you have ${levelTime} seconds to accomplish each of the 20 rounds. </br></br></br><span>Have fun!</span>`
+                    introText.innerHTML = `Nice to have you here ${playerName}, </br></br> during this quiz you will be presented with five terms for each round and your task is to bring all of them into the right order by using drag and drop. </br></br> Each correctly assigned term will earn you five points.</br></br> Your prefered level of difficulty is "${playerLevel}", therefore you have ${levelTime} seconds to accomplish each round. </br></br></br><span>Have fun!</span>`
                     buttonInfo.style.removeProperty('visibility');
                     pane.classList.add('--fade-in');
                     aTag.classList.add('--fade-in');
 
                     const playerData = [playerName, levelTime];
-                    localStorage.setItem("userData", JSON.stringify(playerData));
+                    localStorage.setItem(playerName, JSON.stringify(playerData));
                     
                     buttonStart.removeEventListener('click', animateStart);
                     buttonName.removeEventListener('click', animateStartName);

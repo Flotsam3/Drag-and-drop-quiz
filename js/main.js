@@ -68,9 +68,9 @@ function getExerciseData(){
                     console.log(medalTwo);
                     buttonCard.style.visibility = "hidden";
                     infoText.textContent = `You did it, you just finished the quiz! You scored ${averageScore} points on average.`;
-                    if (averageScore < medalOne){
+                    if (playerScore < medalOne){
                         document.querySelector('.medal1').classList.remove('hidden');
-                    } else if (averageScore < medalTwo) {
+                    } else if (playerScore < medalTwo) {
                         document.querySelector('.medal1').classList.remove('hidden');
                         document.querySelector('.medal2').classList.remove('hidden');
                     } else {

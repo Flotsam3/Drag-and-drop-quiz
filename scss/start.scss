@@ -294,6 +294,18 @@ small {
     }
 }
 
+.name-check {
+    animation: name-check 1s ease-in-out;
+}
+
+.hint {
+    position: absolute;
+    font-family: $main-font;
+    font-size: 0.9rem;
+    color: whitesmoke;
+    visibility: hidden;
+}
+
 .--fade-out {
     animation: fade-out 2s linear forwards;
 }
@@ -352,6 +364,27 @@ small {
     
     100%{
         transform: translateX(-2500px);
+    }
+}
+
+@keyframes name-check {
+    0%{
+        transform: translateX(10px);
+    }
+    20%{
+        transform: translateX(-10px);
+    }
+    40%{
+        transform: translateX(10px);
+    }
+    60%{
+        transform: translateX(-10px);
+    }
+    80%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0px);
     }
 }
 
