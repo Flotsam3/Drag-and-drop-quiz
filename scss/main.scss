@@ -24,8 +24,8 @@ body {
             .player {
                 position: relative;
                 background-color: #e44803;
-                width: 100px;
-                height: 70px;
+                width: 26%;
+                height: 29%;
                 margin-left: 180px;
                 margin-top: 40px;
                 border-radius: 10px;
@@ -64,8 +64,8 @@ body {
             .comp {
                 position: relative;
                 background-color: $colour-main-medium-light;
-                width: 100px;
-                height: 70px;
+                width: 26%;
+                height: 29%;
                 margin-left: 50px;
                 margin-top: 10px;
                 border-radius: 10px;
@@ -147,13 +147,91 @@ body {
         }
     }
 
-    .main{
+    .main {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: relative;
         height: calc(100% - 250px);
         width: 100%;
+
+        .high-scores {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 20%;
+            position: absolute;
+            left: -20%;
+            background-color: $colour-main-medium-light;
+            border-right: 3px solid $colour-main-dark;
+            font-family: $main-font;
+            font-size: 1.5rem;
+            color: whitesmoke;
+            
+            .high-scores__grabber {
+                position: absolute;
+                height: 30px;
+                width: 20px;
+                right: -25px;
+                border: none;
+                background-color: transparent;
+                
+                i {
+                    font-size: 2rem;
+                    color: $colour-main-dark;
+                    cursor: pointer;
+                }
+            }
+
+            .high-scores__grabber:focus {
+                outline: 0;
+            }
+
+            h2 {
+                position: absolute;
+                top: 0;
+                font-style: italic;
+            }
+
+            .divider {
+                position: absolute;
+                top: 70px;
+                font-size: 2rem;
+                color: $colour-main-medium;
+
+                img {
+                    width: 350px;
+                }
+            }
+
+            .high-scores__names {
+                padding-top: 220px;
+                padding-left: 10px;
+                height: 95%;
+                width: 65%;
+            }
+
+            .high-scores__names p {
+                margin: 5px 0;
+                padding: 0;
+                font-size: 1.4rem;
+            }
+
+            .high-scores__points {
+                padding-top: 220px;
+                height: 95%;
+                width: 25%;
+            }
+
+            .high-scores__points p {
+                margin: 5px 0;
+                padding: 0 15px 0 0;
+                font-size: 1.4rem;
+                text-align: right;
+            }
+        }
         
         .card {
             height: 400px;
@@ -309,6 +387,14 @@ body {
     animation: full-house 2s ease-out;
 }
 
+.slide-scores-in {
+    animation: high-scores-slide-in 1.5s ease-in-out forwards;
+}
+
+.slide-scores-out {
+    animation: high-scores-slide-out 1.5s ease-in-out forwards;
+}
+
 @keyframes slide-solution {
     0%{
         transform: translateX(1500px);
@@ -353,5 +439,23 @@ body {
     }
     100%{
         background-color: #1b262c;
+    }
+}
+
+@keyframes high-scores-slide-in {
+    0%{
+        left: -20%;
+    }
+    100%{
+        left: 0;
+    }
+}
+
+@keyframes high-scores-slide-out {
+    0%{
+        left: 0;
+    }
+    100%{
+        left: -20%;
     }
 }

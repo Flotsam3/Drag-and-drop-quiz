@@ -6,6 +6,7 @@ const buttonCard = document.querySelector('#button-card')
 const card = document.querySelector('.card__content');
 const myTimer = document.querySelector('.countdown');
 const infoText = document.querySelector('.info p');
+const slideBars = document.querySelector('.high-scores__grabber');
 let barText = document.querySelectorAll('.bar');
 let rankIndex = [0, 1, 2, 3, 4];
 let rankIndexComputer = [0, 1, 2, 3, 4];
@@ -31,6 +32,7 @@ function getExerciseData(){
         roundText.textContent = `${quizRound} | ${exerciseData.length}`
 
         buttonCard.addEventListener('click', rotateCard);
+        slideBars.addEventListener('click', slideScoreboard);
 
         function showExerciseInfo(){
             infoText.textContent = exerciseData[quizRound].text;
@@ -65,7 +67,7 @@ function getExerciseData(){
                     console.log(medalOne);
                     console.log(medalTwo);
                     console.log(playerScore.textContent);
-
+                    setHighscores();
                     finishedQuiz = true;
                     document.querySelector('.book').style.display = "none";
                     buttonCard.style.visibility = "hidden";
@@ -202,6 +204,55 @@ function getExerciseData(){
             }
         }
     })
+
+    function setHighscores(){
+        const getHighscores = JSON.parse(localStorage.getItem('highScores')) || [];
+        const playerScore = document.querySelector('.player-value');
+        const currentScore = {
+            score: playerScore.textContent,
+            player: playerName
+        }
+        getHighscores.push(currentScore);
+
+        getHighscores.sort((a, b)=>{
+            return b.score-a.score;
+        })
+
+        getHighscores.splice(15);
+
+        localStorage.setItem('highScores', JSON.stringify(getHighscores));
+    }
+
+    function slideScoreboard(){
+        const scoreBoard = document.querySelector('.high-scores');
+
+        if (scoreBoard.classList.contains('slide-scores-in')){
+            scoreBoard.classList.add('slide-scores-out');
+            scoreBoard.classList.remove('slide-scores-in');
+        } else {
+            const getHighscores = JSON.parse(localStorage.getItem("highScores")) || [];
+            const createScoreNames = document.querySelector('.high-scores__names');
+            const createScorePoints = document.querySelector('.high-scores__points');
+
+            for (let i = 0; i < 15; i++) {
+                    const pTag1 = document.createElement('p');
+                    const pTag2 = document.createElement('p');
+                    createScoreNames.appendChild(pTag1);
+                    createScorePoints.appendChild(pTag2);
+            }
+
+            const getScoreNames = document.querySelectorAll('.high-scores__names p');
+            const getScorePoints = document.querySelectorAll('.high-scores__points p');
+
+            getHighscores.forEach((element, index)=>{
+                getScoreNames[index].textContent = element.player;
+                getScorePoints[index].textContent = element.score;
+            })
+
+            scoreBoard.classList.add('slide-scores-in');
+            scoreBoard.classList.remove('slide-scores-out');
+        }
+    }
 }
 
 
