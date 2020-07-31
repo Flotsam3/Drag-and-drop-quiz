@@ -137,7 +137,7 @@ body {
 
             .round {
                 position: absolute;
-                left: 5px;
+                left: 8px;
                 bottom: 5px;
                 font-family: DINBold, Arial, sans-serif;
                 font-weight: bold;
@@ -198,12 +198,9 @@ body {
             .divider {
                 position: absolute;
                 top: 70px;
-                font-size: 2rem;
-                color: $colour-main-medium;
-
-                img {
-                    width: 350px;
-                }
+                height: 10px;
+                width: 90%;
+                border-bottom: 8px double $colour-main-medium;
             }
 
             .high-scores__names {

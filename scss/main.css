@@ -148,7 +148,7 @@ body .header .timer .countdown {
 
 body .header .timer .round {
   position: absolute;
-  left: 5px;
+  left: 8px;
   bottom: 5px;
   font-family: DINBold, Arial, sans-serif;
   font-weight: bold;
@@ -224,12 +224,9 @@ body .main .high-scores h2 {
 body .main .high-scores .divider {
   position: absolute;
   top: 70px;
-  font-size: 2rem;
-  color: #0f4c75;
-}
-
-body .main .high-scores .divider img {
-  width: 350px;
+  height: 10px;
+  width: 90%;
+  border-bottom: 8px double #0f4c75;
 }
 
 body .main .high-scores .high-scores__names {

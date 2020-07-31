@@ -1,98 +1,118 @@
-const buttonStart = document.querySelector('#button-start');
-const buttonName = document.querySelector('#button-submit-name');
-const buttonLevel = document.querySelector('#button-submit-level');
-const buttonInfo = document.querySelector('#button-info');
-const cube = document.querySelector('.cube');
-const cubeFront = document.querySelector('.cube__side--front');
-const cubeRight = document.querySelector('.cube__side--right');
-const cubeLeft = document.querySelector('.cube__side--left');
-const cubeBack = document.querySelector('.cube__side--back');
-const svgRecStart = document.querySelector('.cube__side--front rect');
-const svgRecRight = document.querySelector('.cube__side--right rect');
-const svgRecTop = document.querySelector('.cube__side--top rect');
-const scene = document.querySelector('.scene');
-const pane = document.querySelector('.pane');
-const aTag = document.querySelector('a');
-const small = document.querySelector('small');
-let playerName = "";
-let playerLevel = "";
-
-buttonStart.addEventListener('click', animateStart);
-
-function animateStart(){
-    buttonStart.classList.add('button-disabled');
-    svgRecStart.classList.add('dynamic-border');
-    small.style.visibility = 'hidden';
-    
-    setTimeout(() => {
-        cube.classList.add('right');
-        cubeRight.classList.add('dynamic-border');
-        svgRecRight.classList.add('dynamic-border');
-    }, 500);
-}
-
-buttonName.addEventListener('click', animateStartName);
-
-function animateStartName(){
-    textHint = document.querySelector('.hint');
-    playerName = document.querySelector('#name').value;
-    const regex = /^[a-zA-Z]{2,20}$/;
-
-    if (regex.test(playerName)){
-        textHint.style.visibility = "hidden";
-        buttonName.classList.add('button-disabled');
-        svgRecTop.classList.add('dynamic-border');
-        cube.classList.add('top');
-    } else {
-        document.querySelector('#name').classList.add('name-check');
-        textHint.style.visibility = "visible";
-        setTimeout(() => {
-            document.querySelector('#name').classList.remove('name-check');
-        }, 1000);
+class Player {
+    constructor(){
+        this.buttonStart = document.querySelector('#button-start');
+        this.buttonName = document.querySelector('#button-submit-name');
+        this.buttonLevel = document.querySelector('#button-submit-level');
+        this.buttonInfo = document.querySelector('#button-info');
+        this.cube = document.querySelector('.cube');
+        this.cubeFront = document.querySelector('.cube__side--front');
+        this.cubeRight = document.querySelector('.cube__side--right');
+        this.cubeLeft = document.querySelector('.cube__side--left');
+        this.cubeBack = document.querySelector('.cube__side--back');
+        this.svgRecStart = document.querySelector('.cube__side--front rect');
+        this.svgRecRight = document.querySelector('.cube__side--right rect');
+        this.svgRecTop = document.querySelector('.cube__side--top rect');
+        this.scene = document.querySelector('.scene');
+        this.pane = document.querySelector('.pane');
+        this.aTag = document.querySelector('a');
+        this.small = document.querySelector('small');
+        this.playerName = "";
+        this.playerLevel = "";
+        
+        this.buttonStart.addEventListener('click', ()=>{
+            this.animateStart();
+        });
     };
-}
 
-buttonLevel.addEventListener('click', animateStartLevel);
+    animateStart(){
+        this.buttonStart.classList.add('button-disabled');
+        this.svgRecStart.classList.add('dynamic-border');
+        this.small.style.visibility = 'hidden';
+        
+        setTimeout(() => {
+            this.cube.classList.add('right');
+            this.cubeRight.classList.add('dynamic-border');
+            this.svgRecRight.classList.add('dynamic-border');
+        }, 500);
 
+        this.buttonName.addEventListener('click', ()=>{
+            this.animateStartName();
+        });
+    };
 
-function animateStartLevel(){
-    playerLevel = document.querySelector('input[name = level]:checked').value
-    let levelTime = 0;
+    animateStartName(){
+        const textHint = document.querySelector('.hint');
+        this.playerName = document.querySelector('#name').value;
+        const regex = /^[a-zA-Z]{2,20}$/;
     
-    switch (playerLevel) {
-        case 'easy':
-            levelTime = 45;
-            break;
+        if (regex.test(this.playerName)){
+            textHint.style.visibility = "hidden";
+            this.buttonName.classList.add('button-disabled');
+            this.svgRecTop.classList.add('dynamic-border');
+            this.cube.classList.add('top');
+        } else {
+            document.querySelector('#name').classList.add('name-check');
+            textHint.style.visibility = "visible";
+            setTimeout(() => {
+                document.querySelector('#name').classList.remove('name-check');
+            }, 1000);
+        };
+
+        this.buttonLevel.addEventListener('click', ()=>{
+            this.animateStartLevel();
+        });
+    };
+
+    animateStartLevel(){
+        this.playerLevel = document.querySelector('input[name = level]:checked').value
+        let levelTime = 0;
+        
+        switch (this.playerLevel) {
+            case 'easy':
+                levelTime = 45;
+                break;
             case 'fair':
                 levelTime = 30;
                 break;
-                case 'challenging':
-                    levelTime = 20;
-                }
-                
-                buttonLevel.classList.add('button-disabled');
-                cube.removeChild(cubeFront);
-                cube.removeChild(cubeLeft);
-                cube.removeChild(cubeRight);
-                cube.removeChild(cubeBack);
-                svgRecTop.classList.remove('dynamic-border');    
-                scene.classList.add('--fade-out');
-                
-                setTimeout(() => {
-                    console.log(playerName);
-                    console.log(playerLevel);
-                    console.log(levelTime);
-                    const introText = document.querySelector('.pane p');
-                    introText.innerHTML = `Nice to have you here ${playerName}, </br></br> during this quiz you will be presented with five terms for each round and your task is to bring all of them into the right order by using drag and drop. </br></br> Each correctly assigned term will earn you five points.</br></br> Your prefered level of difficulty is "${playerLevel}", therefore you have ${levelTime} seconds to accomplish each round. </br></br></br><span>Have fun!</span>`
-                    buttonInfo.style.removeProperty('visibility');
-                    pane.classList.add('--fade-in');
-                    aTag.classList.add('--fade-in');
-
-                    const playerData = [playerName, levelTime];
-                    localStorage.setItem('userData', JSON.stringify(playerData));
+            case 'challenging':
+                levelTime = 20;
+        };
                     
-                    buttonStart.removeEventListener('click', animateStart);
-                    buttonName.removeEventListener('click', animateStartName);
-                    buttonLevel.removeEventListener('click', animateStartLevel);
-                }, 2000);
-}
+        this.buttonLevel.classList.add('button-disabled');
+        this.cube.removeChild(this.cubeFront);
+        this.cube.removeChild(this.cubeLeft);
+        this.cube.removeChild(this.cubeRight);
+        this.cube.removeChild(this.cubeBack);
+        this.svgRecTop.classList.remove('dynamic-border');    
+        this.scene.classList.add('--fade-out');
+                    
+        setTimeout(() => {
+            const introText = document.querySelector('.pane p');
+            introText.innerHTML = `Nice to have you here ${this.playerName}, </br></br> during this quiz you will be presented with five terms for each round and your task is to bring all of them into the right order by using drag and drop. </br></br> Each correctly assigned term will earn you five points.</br></br> Your prefered level of difficulty is "${this.playerLevel}", therefore you have ${levelTime} seconds to accomplish each round. </br></br></br><span>Have fun!</span>`
+            this.buttonInfo.style.removeProperty('visibility');
+            this.pane.classList.add('--fade-in');
+            this.aTag.classList.add('--fade-in');
+    
+            const playerData = [this.playerName, levelTime];
+            localStorage.setItem('userData', JSON.stringify(playerData));
+            
+            this.buttonStart.removeEventListener('click', ()=>{
+                animateStart();
+            });
+            this.buttonName.removeEventListener('click', ()=>{
+                animateStartName();
+            });
+            this.buttonLevel.removeEventListener('click', ()=>{
+                animateStartLevel();
+            });
+        }, 2000);
+    };
+};
+
+new Player();
+
+
+
+
+
+

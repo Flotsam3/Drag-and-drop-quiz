@@ -16,7 +16,6 @@ let randomNumber = 0;
 let randomNumberComputer = 0;
 let roundText = document.querySelector('.round');
 let finishedQuiz = false;
-
 infoText.textContent = `Get ready to start ${playerName}!`;
 myTimer.textContent = levelTime;
 
