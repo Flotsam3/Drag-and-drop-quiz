@@ -8,7 +8,7 @@
     {
         "text": "Sort these buildings according to their height, from the highest to the lowest!",
         "options": ["Burj Khalifa (Dubai)", "Shanghai Tower (Shanghai)", "Taipei 101 (Taipeh)", "Petronas Towers (Kuala Lumpur)", "Empire State Building (New York)"],
-        "solutions": ["828m", "632m", "508m", "452m", "381m"],
+        "solutions": ["828 m", "632 m", "508 m", "452 m", "381 m"],
         "rank": [1, 2, 3, 4, 5]
     },
     {
@@ -27,7 +27,7 @@
     
         "text": "Sort these countries according to the average height of their citizens, from the tallest to the shortest (by year of birth 1994)!",
         "options": ["Denmark", "France", "Poland", "Syria", "Philippines"],
-        "solutions": ["174,3cm", "172,3cm", "171,0cm", "164,5cm", "156,4cm"],
+        "solutions": ["174,3 cm", "172,3 cm", "171,0 cm", "164,5 cm", "156,4 cm"],
         "rank": [1, 2, 3, 4, 5]
     },
     {
@@ -39,13 +39,13 @@
     {
         "text": "Sort these languages according to their speakers worldwide, from most spoken to least spoken!",
         "options": ["English", "Mandarin-chinese", "Hindi", "Spanish", "Arabic"],
-        "solutions": ["1.13mil.", "1.11mil.", "615mil.", "572mil.", "447mil."],
+        "solutions": ["1.13 mil.", "1.11 mil.", "615 mil.", "572 mil.", "447 mil."],
         "rank": [1, 2, 3, 4, 5]
     },
     {
         "text": "Sort these countries according to the price of one Big Mac, from the most expensive to the cheapest (in US-Dollar)!",
         "options": ["USA", "United Kingdom", "Pakistan", "Poland", "India"],
-        "solutions": ["5.51$", "4.23$", "3.09$", "2.74$", "2.51$"],
+        "solutions": ["$ 5.51", "$ 4.23", "$ 3.09", "$ 2.74", "$ 2.51"],
         "rank": [1, 2, 3, 4, 5]
     },
     {
@@ -63,31 +63,31 @@
     {
         "text": "Sort these countries according to the height of their highest mountain, from the hightest to the lowest!",
         "options": ["Argentina", "Russia", "Switzerland", "Japan", "Libanon"],
-        "solutions": ["Aconcaguo, 6959m", "Elbrus, 5642m", "Dufourspitze, 4634m", "Fujisan, 3776m", "Karnat as-S., 3088m"],
+        "solutions": ["Aconcaguo, 6959 m", "Elbrus, 5642 m", "Dufourspitze, 4634 m", "Fujisan, 3776 m", "Karnat as-S., 3088 m"],
         "rank": [1, 2, 3, 4, 5]
     },
     {
         "text": "Sort these car brands according to the number of worldwide produced cars in 2012, from the highest to the lowest!",
         "options": ["Toyota", "Volkswagen", "Ford", "Renault", "BMW"],
-        "solutions": ["10.1mil.", "9.2mil.", "5.5mil.", "2.6mil.", "2.0mil."],
+        "solutions": ["10.1 mil.", "9.2 mil.", "5.5 mil.", "2.6 mil.", "2.0 mil."],
         "rank": [1, 2, 3, 4, 5]
     },
     {
         "text": "Sort these countries according to the speed limit on highways for automobiles (without trailer), from highest to lowest!",
         "options": ["Poland", "Italy", "Ireland", "United Kingdom", "Russia"],
-        "solutions": ["140km/h", "130km/h", "120km/h", "112km/h", "110km/h"],
+        "solutions": ["140 km/h", "130 km/h", "120 km/h", "112 km/h", "110 km/h"],
         "rank": [1, 2, 3, 4, 5]
     },
     {
         "text": "Sort these countries according to the number of millionares that live there, from the most to the least!",
         "options": ["China", "Australia", "India", "Saudi Arabia", "South Africa"],
-        "solutions": ["4.4mil.", "1.1mil.", "759,000", "147,000", "46,000"],
+        "solutions": ["4.4 mil.", "1.1 mil.", "759,000", "147,000", "46,000"],
         "rank": [1, 2, 3, 4, 5]
     },
     {
         "text": "Sort these airports according to the number of passengers in 2019, from the highest to the lowest!",
         "options": ["Atlanta (ATL)", "Peking(PEK)", "Dubai (DXB)", "London (LHR)", "Frankfurt (FRA)"],
-        "solutions": ["110.53mil.", "100.01mil.", "86,4mil.", "80,89mil.", "70,56mil."],
+        "solutions": ["110.53 mil.", "100.01 mil.", "86,4 mil.", "80,89 mil.", "70,56 mil."],
         "rank": [1, 2, 3, 4, 5]
     },
     {
@@ -99,13 +99,13 @@
     {
         "text": "Sort these fruits and vegetables according to their amount of vitamin C, from the highest to the lowest!",
         "options": ["Black currant", "Red pepper", "Papaya", "Strawberry", "Banana"],
-        "solutions": ["177mg", "140mg", "80mg", "55mg", "10mg"],
+        "solutions": ["177 mg", "140 mg", "80 mg", "55 mg", "10 mg"],
         "rank": [1, 2, 3, 4, 5]
     },
     {
         "text": "Sort these planets according to their maximum distance to the earth, from the nearest to the farthest!",
         "options": ["Mercury", "Venus", "Mars", "Jupiter", "Saturn"],
-        "solutions": ["221.9mil. km", "261mil. km", "401mil. km", "968.1mil. km", "1658mil. km"],
+        "solutions": ["221.9 mil. km", "261 mil. km", "401 mil. km", "968.1 mil. km", "1658 mil. km"],
         "rank": [1, 2, 3, 4, 5]
     },
     {
