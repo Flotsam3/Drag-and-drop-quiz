@@ -6,9 +6,9 @@
         "rank": [1, 2, 3, 4, 5]
     },
     {
-        "text": "Sort these buildings according to their height, from the highest to the lowest!",
-        "options": ["Burj Khalifa (Dubai)", "Shanghai Tower (Shanghai)", "Taipei 101 (Taipeh)", "Petronas Towers (Kuala Lumpur)", "Empire State Building (New York)"],
-        "solutions": ["828 m", "632 m", "508 m", "452 m", "381 m"],
+        "text": "Sort these browsers according to their user percentage in Germany of july 2020 (all platforms), from the most used to the least used!",
+        "options": ["Chrome", "Safari", "Firefox", "Edge", "Opera"],
+        "solutions": ["51,67%", "17,49%", "13,19%", "3,24%", "2,85%"],
         "rank": [1, 2, 3, 4, 5]
     },
     {
@@ -67,9 +67,9 @@
         "rank": [1, 2, 3, 4, 5]
     },
     {
-        "text": "Sort these car brands according to the number of worldwide produced cars in 2012, from the highest to the lowest!",
+        "text": "Sort these car brands according to the number of worldwide produced cars in 2017, from the highest to the lowest!",
         "options": ["Toyota", "Volkswagen", "Ford", "Renault", "BMW"],
-        "solutions": ["10.1 mil.", "9.2 mil.", "5.5 mil.", "2.6 mil.", "2.0 mil."],
+        "solutions": ["10.4 mil.", "10.3 mil.", "6.3 mil.", "4.1 mil.", "2.5 mil."],
         "rank": [1, 2, 3, 4, 5]
     },
     {
@@ -79,9 +79,9 @@
         "rank": [1, 2, 3, 4, 5]
     },
     {
-        "text": "Sort these countries according to the number of millionares that live there, from the most to the least!",
-        "options": ["China", "Australia", "India", "Saudi Arabia", "South Africa"],
-        "solutions": ["4.4 mil.", "1.1 mil.", "759,000", "147,000", "46,000"],
+        "text": "Sort videogames according to the year of their release, from the oldest to the youngest!",
+        "options": ["Pong", "Pac-Man", "Tetris", "Super Mario Bros.", "Civilization"],
+        "solutions": ["1972", "1980", "1984", "1985", "1991"],
         "rank": [1, 2, 3, 4, 5]
     },
     {
@@ -103,9 +103,9 @@
         "rank": [1, 2, 3, 4, 5]
     },
     {
-        "text": "Sort these planets according to their maximum distance to the earth, from the nearest to the farthest!",
-        "options": ["Mercury", "Venus", "Mars", "Jupiter", "Saturn"],
-        "solutions": ["221.9 mil. km", "261 mil. km", "401 mil. km", "968.1 mil. km", "1658 mil. km"],
+        "text": "Sort these online applications according to their release from the oldest to the youngest!",
+        "options": ["Skype", "Google", "Twitter", "Github", "Instagram"],
+        "solutions": ["2003", "2005", "2006", "2008", "2010"],
         "rank": [1, 2, 3, 4, 5]
     },
     {
