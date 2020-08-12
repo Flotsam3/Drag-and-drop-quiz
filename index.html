@@ -6,9 +6,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
     <link rel="stylesheet" href="scss/start.css">
     <link rel="stylesheet" href="scss/main.css">
-    <script src="js/start.js" defer></script>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <script src="js/start.js" defer></script>
     <title>DaD Quiz Intro</title>
 </head>
 
@@ -30,19 +30,25 @@
                 <div class="cube__side cube__side--left">left</div>
                 <div class="cube__side cube__side--top"><svg><rect></rect></svg>
                     <div class="level-selection">
-                        <h4>Choose your level</h4>
-                        <div class="level-easy">
-                            <input type="radio" name="level" id="easy" value="easy">
-                            <label for="easy">easy</label>
-                        </div>
-                        <div class="level-fair">
-                            <input type="radio" name="level" id="fair" value="fair" checked>
-                            <label for="easy">fair</label>
-                        </div>
-                        <div class="level-challenging">
-                            <input type="radio" name="level" id="challenging" value="challenging">
-                            <label for="easy">challenging</label>
-                        </div>
+                        <h4>Choose your level!</h4>
+                        <!-- <div class="level-easy"> -->
+                            <label class="container">easy
+                                <input type="radio" name="level" id="easy" value="easy">
+                                <span class="checkmark"></span>
+                            </label>
+                        <!-- </div> -->
+                        <!-- <div class="level-fair"> -->
+                            <label class="container">fair
+                                <input type="radio" name="level" id="fair" value="fair" checked>
+                                <span class="checkmark"></span>
+                            </label>
+                        <!-- </div> -->
+                        <!-- <div class="level-challenging"> -->
+                            <label class="container">challenging
+                                <input type="radio" name="level" id="challenging" value="challenging">
+                                <span class="checkmark"></span>
+                            </label>
+                        <!-- </div> -->
                     </div>
                     <button id="button-submit-level">OK</button>
                 </div>

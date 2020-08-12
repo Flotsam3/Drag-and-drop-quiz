@@ -63,9 +63,6 @@ function getExerciseData(){
                     const averageScore = parseInt(playerScore.textContent) / exerciseData.length;
                     const medalOne = exerciseData.length * 25 * 33 / 100;
                     const medalTwo = exerciseData.length * 25 * 66 / 100;
-                    console.log(medalOne);
-                    console.log(medalTwo);
-                    console.log(playerScore.textContent);
                     setHighscores();
                     finishedQuiz = true;
                     document.querySelector('.book').style.display = "none";
@@ -150,7 +147,7 @@ function getExerciseData(){
                 }, 1500 * index);
             });
             
-            const delay = new Promise( (resolve, reject) => {
+            const delay = new Promise( (resolve) => {
                 setTimeout(() => {
                     playerScore.textContent = playerScoreCounter;
                     computerScore.textContent = computerScoreCounter;
@@ -162,7 +159,7 @@ function getExerciseData(){
                 });
                 
             delay.then( () => {
-                return new Promise(function(resolve, reject) { 
+                return new Promise(function(resolve) { 
                         buttonCard.disabled = false;
                         buttonCard.classList.remove('button-card-disabled');
                         buttonCard.classList.add('button-card-active');
@@ -170,7 +167,6 @@ function getExerciseData(){
                 });
             }).then( () => {
                 setTimeout(() => {
-                    console.log('Function three running');
                 }, 1000);
             }); 
         }

@@ -27,11 +27,14 @@ body .start {
 
 body .start h1 {
   position: absolute;
-  top: 50px;
+  top: 10%;
+  margin: 0;
+  padding: 0;
   font-family: "Rubik", sans-serif;
   font-size: 4rem;
   -webkit-animation: title-anim 3s linear infinite;
           animation: title-anim 3s linear infinite;
+  z-index: 2;
 }
 
 body .start .scene {
@@ -123,21 +126,17 @@ body .start .scene .cube .cube__side #name::placeholder {
 }
 
 body .start .scene .cube .cube__side .level-selection {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  position: relative;
   margin-bottom: 40px;
   z-index: 1;
+  /* Customize the label (the container) */
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
 }
 
 body .start .scene .cube .cube__side .level-selection h4 {
@@ -148,18 +147,65 @@ body .start .scene .cube .cube__side .level-selection h4 {
   color: #bbe1fa;
 }
 
-body .start .scene .cube .cube__side .level-selection label, body .start .scene .cube .cube__side .level-selection input {
-  margin-bottom: 10px;
-  margin-left: 10px;
+body .start .scene .cube .cube__side .level-selection .container {
+  display: block;
+  position: relative;
+  padding-left: 65px;
+  margin-bottom: 12px;
+  cursor: pointer;
   font-family: "Rubik", sans-serif;
-  color: #bbe1fa;
+  font-size: 1rem;
+  color: whitesmoke;
+  line-height: 1.6rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-body .start .scene .cube .cube__side .level-selection .level-easy, body .start .scene .cube .cube__side .level-selection .level-fair, body .start .scene .cube .cube__side .level-selection .level-challenging {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 150px;
+body .start .scene .cube .cube__side .level-selection .container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+body .start .scene .cube .cube__side .level-selection .checkmark {
+  position: absolute;
+  top: 0;
+  left: 30px;
+  height: 25px;
+  width: 25px;
+  background-color: whitesmoke;
+  border-radius: 50%;
+}
+
+body .start .scene .cube .cube__side .level-selection .container:hover input ~ .checkmark {
+  background-color: whitesmoke;
+}
+
+body .start .scene .cube .cube__side .level-selection .container input:checked ~ .checkmark {
+  background-color: #3282b8;
+}
+
+body .start .scene .cube .cube__side .level-selection .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+body .start .scene .cube .cube__side .level-selection .container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+body .start .scene .cube .cube__side .level-selection .container .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: whitesmoke;
 }
 
 body .start .scene .cube svg, body .start .scene .cube svg rect {
@@ -345,14 +391,15 @@ small {
 }
 
 .quiz-info .pane {
-  height: 550px;
+  height: 500px;
   width: 400px;
+  margin-top: 40px;
   background-color: #1b262c;
   border-radius: 20px;
 }
 
 .quiz-info .pane p {
-  padding: 40px 20px 20px 20px;
+  padding: 0px 20px;
   font-size: 1.3rem;
   line-height: 1.5rem;
   font-family: "Rubik", sans-serif;
@@ -367,7 +414,7 @@ small {
 .quiz-info #button-info {
   height: 40px;
   width: 150px;
-  margin-top: 40px;
+  margin-top: 5px;
   background-color: #1b262c;
   border: none;
   -webkit-box-shadow: 0px 0px 0px 5px #0f4c75;
