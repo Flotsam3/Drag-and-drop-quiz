@@ -88,7 +88,7 @@ class Player {
                     
         setTimeout(() => {
             const introText = document.querySelector('.pane p');
-            introText.innerHTML = `Nice to have you here ${this.playerName}, </br></br> during this quiz you will be presented with five terms for each round and your task is to bring all of them into the right order by using drag and drop. </br></br> Each correctly assigned term will earn you five points.</br></br> Your prefered level of difficulty is "${this.playerLevel}", therefore you have ${levelTime} seconds to accomplish each round. </br></br></br><span>Have fun!</span>`
+            introText.innerHTML = `Nice to have you here ${this.playerName}, </br></br> during this quiz you will be presented with five terms for each round and your task is to bring all of them into the right order by using drag and drop. </br></br> Each correctly assigned term will earn you five points.</br></br> Your preferred level of difficulty is "${this.playerLevel}", therefore you have ${levelTime} seconds to accomplish each round. </br></br></br><span>Have fun!</span>`
             this.buttonInfo.style.removeProperty('visibility');
             this.pane.classList.add('--fade-in');
             this.aTag.classList.add('--fade-in');

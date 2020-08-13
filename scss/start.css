@@ -130,13 +130,6 @@ body .start .scene .cube .cube__side .level-selection {
   margin-bottom: 40px;
   z-index: 1;
   /* Customize the label (the container) */
-  /* Hide the browser's default radio button */
-  /* Create a custom radio button */
-  /* On mouse-over, add a grey background color */
-  /* When the radio button is checked, add a blue background */
-  /* Create the indicator (the dot/circle - hidden when not checked) */
-  /* Show the indicator (dot/circle) when checked */
-  /* Style the indicator (dot/circle) */
 }
 
 body .start .scene .cube .cube__side .level-selection h4 {
