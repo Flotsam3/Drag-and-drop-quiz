@@ -6,9 +6,9 @@
         "rank": [1, 2, 3, 4, 5]
     },
     {
-        "text": "Sort these buildings according to their height, from the highest to the lowest!",
-        "options": ["Burj Khalifa (Dubai)", "Shanghai Tower (Shanghai)", "Taipei 101 (Taipeh)", "Petronas Towers (Kuala Lumpur)", "Empire State Building (New York)"],
-        "solutions": ["828m", "632m", "508m", "452m", "381m"],
+        "text": "Sort these programming languages according to the year of their invention, from the oldest to the youngest!",
+        "options": ["Fortran", "Cobol", "C++", "JavaScript", "PHP"],
+        "solutions": ["1957", "1960", "1983", "1995", "1997"],
         "rank": [1, 2, 3, 4, 5]
     }
 ]
