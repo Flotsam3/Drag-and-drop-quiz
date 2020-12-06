@@ -22,7 +22,7 @@ myTimer.textContent = levelTime;
 getExerciseData();
 
 function getExerciseData(){
-    fetch('data-demo.json')
+    fetch('data.json')
     .then((response) => {
         return response.json();
     })
