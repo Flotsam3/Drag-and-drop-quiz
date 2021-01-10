@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/node_modules/normalize.css/normalize.css">
-    <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/main.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="scss/start.css">
+    <link rel="stylesheet" href="scss/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@1,500&display=swap" rel="stylesheet"> 
-    <title>DAD Quiz</title>
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <script src="js/start.js" defer></script>
+    <title>DaD Quiz Intro</title>
 </head>
 
 <body>
-    <main class="start">
+    <section class="start">
         <h1>DaD Quizz Challenge</h1>
         <div class="scene">
             <div class="cube">
@@ -22,30 +24,42 @@
                 <div class="cube__side cube__side--back">back</div>
                 <div class="cube__side cube__side--right"><svg><rect></rect></svg>
                     <input type="name" id="name" placeholder="Enter your name">
+                    <span class="hint">Please enter a valid name!</span>
                     <button id="button-submit-name">OK</button>
                 </div>
                 <div class="cube__side cube__side--left">left</div>
                 <div class="cube__side cube__side--top"><svg><rect></rect></svg>
                     <div class="level-selection">
                         <h4>Choose your level!</h4>
-                        <div class="level-easy">
+                        <label class="container">easy
                             <input type="radio" name="level" id="easy" value="easy">
-                            <label for="easy">easy</label>
-                        </div>
-                        <div class="level-fair">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">fair
                             <input type="radio" name="level" id="fair" value="fair" checked>
-                            <label for="easy">fair</label>
-                        </div>
-                        <div class="level-challenging">
+                            <span class="checkmark"></span>
+                        </label>
+                        <label class="container">challenging
                             <input type="radio" name="level" id="challenging" value="challenging">
-                            <label for="easy">challenging</label>
-                        </div>
+                            <span class="checkmark"></span>
+                        </label>
                     </div>
                     <button id="button-submit-level">OK</button>
                 </div>
                 <div class="cube__side cube__side--bottom">bottom</div>
             </div>
         </div>
-    </main>
+    </section>
+        
+    <section class="quiz-info">
+        <div class="pane">
+            <p></p>
+        </div>
+        <a href="main.html"><button id="button-info" style="visibility: hidden;">OK</button></a>
+    </section>
+
+    <footer>
+        <small>&#169; Edwin Wagner (2020)</small>
+    </footer>
 </body>
 </html>

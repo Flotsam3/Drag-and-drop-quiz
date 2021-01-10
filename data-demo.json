@@ -1,0 +1,14 @@
+[
+    {
+        "text": "Sort the five towns according to the number of overnight visitors in 2018, from most visited to least visited!",
+        "options": ["Bangkok", "Paris", "New York", "Istanbul", "Tokyo"],
+        "solutions": ["22.78 mil", "19.10 mil", "13.60 mil", "13.40 mil", "12.93"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these programming languages according to the year of their invention, from the oldest to the youngest!",
+        "options": ["Fortran", "Cobol", "C++", "JavaScript", "PHP"],
+        "solutions": ["1957", "1960", "1983", "1995", "1997"],
+        "rank": [1, 2, 3, 4, 5]
+    }
+]

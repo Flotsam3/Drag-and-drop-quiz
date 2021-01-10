@@ -1,0 +1,123 @@
+[
+    {
+        "text": "Sort the five towns according to the number of overnight visitors in 2018, from most visited to least visited!",
+        "options": ["Bangkok", "Paris", "New York", "Istanbul", "Tokyo"],
+        "solutions": ["22.78 mil", "19.10 mil", "13.60 mil", "13.40 mil", "12.93 mil"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these browsers according to their user percentage in Germany of july 2020 (all platforms), from the most used to the least used!",
+        "options": ["Chrome", "Safari", "Firefox", "Edge", "Opera"],
+        "solutions": ["51,67%", "17,49%", "13,19%", "3,24%", "2,85%"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these CSS selectors according to their specificity, from most specific to least specific!",
+        "options": ["style = 'color: white;'", "#myDiv", ".myClass", "li > ul", "div"],
+        "solutions": ["inline style (1-0-0-0)", "ID Selector (1-0-0)", "1 class (0-1-0)", "2 elements (0-0-2)", "1 element (0-0-1)"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these inventions in chronological order (from the oldest to the youngest)!",
+        "options": ["Compass", "Mechanical clock", "Refridgerator", "Electric bulb", "Airplane"],
+        "solutions": ["206 BC, China", "725, China", "1834, USA", "1880, USA", "1903, USA"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+    
+        "text": "Sort these countries according to the average height of their citizens, from the tallest to the shortest (by year of birth 1994)!",
+        "options": ["Denmark", "France", "Poland", "Syria", "Philippines"],
+        "solutions": ["174,3 cm", "172,3 cm", "171,0 cm", "164,5 cm", "156,4 cm"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these towns according to the number of bridges they have, from most to least!",
+        "options": ["Hamburg", "Vienna", "Amsterdam", "Hongkong", "Chicago"],
+        "solutions": ["2496", "1716", "1680", "1455", "1214"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these languages according to their speakers worldwide, from most spoken to least spoken!",
+        "options": ["English", "Mandarin-chinese", "Hindi", "Spanish", "Arabic"],
+        "solutions": ["1.13 mil.", "1.11 mil.", "615 mil.", "572 mil.", "447 mil."],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these countries according to the price of one Big Mac, from the most expensive to the cheapest (in US-Dollar)!",
+        "options": ["USA", "United Kingdom", "Pakistan", "Poland", "India"],
+        "solutions": ["$ 5.51", "$ 4.23", "$ 3.09", "$ 2.74", "$ 2.51"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these programming languages according to the year of their invention, from the oldest to the youngest!",
+        "options": ["Fortran", "Cobol", "C++", "JavaScript", "PHP"],
+        "solutions": ["1957", "1960", "1983", "1995", "1997"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these countries according to the year when their first IKEA store opened, from the oldest to the youngest!",
+        "options": ["Sweden", "Germany", "France", "USA", "Finland"],
+        "solutions": ["1958", "1974", "1981", "1985", "1996"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these countries according to the height of their highest mountain, from the hightest to the lowest!",
+        "options": ["Argentina", "Russia", "Switzerland", "Japan", "Libanon"],
+        "solutions": ["Aconcaguo, 6959 m", "Elbrus, 5642 m", "Dufourspitze, 4634 m", "Fujisan, 3776 m", "Karnat as-S., 3088 m"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these car brands according to the number of worldwide produced cars in 2017, from the highest to the lowest!",
+        "options": ["Toyota", "Volkswagen", "Ford", "Renault", "BMW"],
+        "solutions": ["10.4 mil.", "10.3 mil.", "6.3 mil.", "4.1 mil.", "2.5 mil."],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these countries according to the speed limit on highways for automobiles (without trailer), from highest to lowest!",
+        "options": ["Poland", "Italy", "Ireland", "United Kingdom", "Russia"],
+        "solutions": ["140 km/h", "130 km/h", "120 km/h", "112 km/h", "110 km/h"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort videogames according to the year of their release, from the oldest to the youngest!",
+        "options": ["Pong", "Pac-Man", "Tetris", "Super Mario Bros.", "Civilization"],
+        "solutions": ["1972", "1980", "1984", "1985", "1991"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these airports according to the number of passengers in 2019, from the highest to the lowest!",
+        "options": ["Atlanta (ATL)", "Peking(PEK)", "Dubai (DXB)", "London (LHR)", "Frankfurt (FRA)"],
+        "solutions": ["110.53 mil.", "100.01 mil.", "86,4 mil.", "80,89 mil.", "70,56 mil."],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these famous brands/companies according to the year of their foundation, from the oldest to the youngest!",
+        "options": ["Levi Strauss & Co.", "Coca Cola", "Lego", "Sony", "Starbucks"],
+        "solutions": ["1853", "1892", "1934", "1946", "1971"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these fruits and vegetables according to their amount of vitamin C, from the highest to the lowest!",
+        "options": ["Black currant", "Red pepper", "Papaya", "Strawberry", "Banana"],
+        "solutions": ["177 mg", "140 mg", "80 mg", "55 mg", "10 mg"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these online applications according to their release from the oldest to the youngest!",
+        "options": ["Skype", "Google", "Twitter", "Github", "Instagram"],
+        "solutions": ["2003", "2005", "2006", "2008", "2010"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these animals according to their average life expectancy, from the highest to the lowest!",
+        "options": ["Asian elephant", "American alligator", "Goldfish", "Dolphin", "King cobra"],
+        "solutions": ["78 years", "56 years", "41 years", "20 years", "17 years"],
+        "rank": [1, 2, 3, 4, 5]
+    },
+    {
+        "text": "Sort these films according to their year of production, from the oldest to the youngest!",
+        "options": ["Star Wars", "E.T. the Extra-Terrestrial", "Jurassic Park", "Independence Day", "Spider-Man"],
+        "solutions": ["1977", "1982", "1993", "1996", "2002"],
+        "rank": [1, 2, 3, 4, 5]
+    }
+]

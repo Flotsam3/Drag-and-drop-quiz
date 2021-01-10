@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" integrity="sha512-oHDEc8Xed4hiW6CxD7qjbnI+B07vDdX7hEPTvn9pSZO1bcRqHp8mj9pyr+8RVC2GmtEfI2Bi9Ke9Ass0as+zpg==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+    <script src="js/main.js" defer></script>
+    <script src="js/drag-and-drop.js" defer></script>
+    <title>DaD quiz</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="score">
+            <div class="player">
+                <div id="player-value" class="player-value">0</div>
+                <p class="player-badge">You</p>
+            </div>
+            <div class="comp">
+                <div id="comp-value" class="comp-value">0</div>
+                <p class="comp-badge">JS</p>
+            </div>
+        </div>
+        <div class="info">
+            <p></p>
+        </div>
+        <div class="timer">
+            <span class="countdown"></span>
+            <span class="round"></span>
+        </div>
+    </header>
+
+    <section class="main">
+        <div class="high-scores">
+            <h2>Leaderboard</h2>
+            <div class="divider"></div>
+            <div class="high-scores__names"></div>
+            <div class="high-scores__points"></div>
+            <button class="high-scores__grabber"><i class="fas fa-grip-lines-vertical"></i></button>
+        </div>
+        <div class="card">
+            <div class="card__content">
+                <div class="card__front">
+                    <div class="medal1 hidden"><i class="fas fa-medal"></i></div>
+                    <div class="medal2 hidden"><i class="fas fa-medal"></i></div>
+                    <div class="medal3 hidden"><i class="fas fa-medal"></i></div>
+                    <div class="book"><i class="fas fa-book-open"></i></div>
+                </div>
+                <div class="card__back">
+                    <div class="bar draggable" draggable = "true"> <span class="solution"> <span class="number"></span></span></div>
+                    <div class="bar draggable" draggable = "true"> <span class="solution"> <span class="number"></span></span></div>
+                    <div class="bar draggable" draggable = "true"> <span class="solution"> <span class="number"></span></span></div>
+                    <div class="bar draggable" draggable = "true"> <span class="solution"> <span class="number"></span></span></div>
+                    <div class="bar draggable" draggable = "true"> <span class="solution"> <span class="number"></span></span></div>
+                </div>
+            </div>
+        </div>
+        <button id="button-card" class="button-card-active">OK</button>
+    </section>
+</body>
+</html>
