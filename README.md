@@ -1,2 +1,2 @@
 # Drag-and-drop-quiz
-An animated drag and drop quiz
+This quiz is created as an desktop application. Challenge yourself with questions from certain areas. Depending on your preferred level of dificulty, you have a maximum of 45 seconds to bring five answers into the correct order by using drag and drop. Having only five seconds left, a countdown reminds you to hurry up, so keep your sound turned on. To boost the tension, you will compete against a computer player. After having finished all 20 questions, you will find your name in the leaderboard and according to your performance a max of three medals on your imaginary chest.
