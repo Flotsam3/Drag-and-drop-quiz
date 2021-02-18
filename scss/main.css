@@ -25,7 +25,7 @@ body .header .score .player {
   background-color: #e44803;
   width: 26%;
   height: 29%;
-  margin-left: 180px;
+  margin-left: 50%;
   margin-top: 40px;
   border-radius: 10px;
   position: relative;
@@ -34,9 +34,9 @@ body .header .score .player {
 body .header .score .player .player-badge {
   position: absolute;
   top: 45px;
-  left: 120px;
+  left: 110%;
   font-family: "Rubik", sans-serif;
-  font-size: 1.3rem;
+  font-size: calc(max(12px, 1.4vw));
   color: whitesmoke;
 }
 
@@ -55,7 +55,7 @@ body .header .score .player:after {
 body .header .score .player-value {
   font-family: DINBold, Arial, sans-serif;
   color: #fff;
-  font-size: 50px;
+  font-size: calc(max(16px, 2.3vw));
   text-align: center;
   line-height: 70px;
 }
@@ -65,7 +65,7 @@ body .header .score .comp {
   background-color: #3282b8;
   width: 26%;
   height: 29%;
-  margin-left: 50px;
+  margin-left: 15%;
   margin-top: 10px;
   border-radius: 10px;
   position: relative;
@@ -74,9 +74,9 @@ body .header .score .comp {
 body .header .score .comp .comp-badge {
   position: absolute;
   top: 45px;
-  left: 125px;
+  left: 110%;
   font-family: "Rubik", sans-serif;
-  font-size: 1.3rem;
+  font-size: calc(max(12px, 1.4vw));
   color: whitesmoke;
 }
 
@@ -95,7 +95,7 @@ body .header .score .comp:after {
 body .header .score .comp-value {
   font-family: DINBold, Arial, sans-serif;
   color: #fff;
-  font-size: 50px;
+  font-size: calc(max(16px, 2.3vw));
   text-align: center;
   line-height: 70px;
 }
@@ -142,7 +142,7 @@ body .header .timer {
 body .header .timer .countdown {
   font-family: DINBold, Arial, sans-serif;
   font-weight: bold;
-  font-size: 5rem;
+  font-size: calc(max(54px, 4vw));
   color: #3282b8;
 }
 
@@ -192,7 +192,7 @@ body .main .high-scores {
   background-color: #3282b8;
   border-right: 3px solid #1b262c;
   font-family: "Rubik", sans-serif;
-  font-size: 1.5rem;
+  font-size: calc(max(16px, 1.5vw));
   color: whitesmoke;
 }
 
@@ -218,12 +218,13 @@ body .main .high-scores .high-scores__grabber:focus {
 body .main .high-scores h2 {
   position: absolute;
   top: 0;
+  font-size: 120%;
   font-style: italic;
 }
 
 body .main .high-scores .divider {
   position: absolute;
-  top: 70px;
+  top: calc(max(5vh, 4vw));
   height: 10px;
   width: 90%;
   border-bottom: 8px double #0f4c75;
@@ -256,8 +257,8 @@ body .main .high-scores .high-scores__points p {
 }
 
 body .main .card {
-  height: 400px;
-  width: 350px;
+  height: 40vh;
+  width: 18vw;
   border-radius: 10px;
   -webkit-perspective: 800px;
           perspective: 800px;
@@ -334,7 +335,7 @@ body .main .card .card__content .card__back .bar {
   background-color: #0f4c75;
   text-align: center;
   font-family: "Rubik", sans-serif;
-  font-size: 1rem;
+  font-size: calc(max(12px, 0.8vw));
   color: whitesmoke;
   border-radius: 5px;
 }
@@ -345,10 +346,10 @@ body .main .card .card__content .card__back .draggable {
 
 body .main .card .card__content .card__back .solution {
   position: absolute;
-  left: 350px;
+  left: 110%;
   visibility: hidden;
   height: 40px;
-  width: 250px;
+  width: 90%;
   background-color: #3282b8;
   border-radius: 5px;
   line-height: 2.5rem;
@@ -367,7 +368,7 @@ body .main .card .card__content .card__back .number {
 }
 
 body .main .card .card__content .card__front i {
-  font-size: 4rem;
+  font-size: calc(max(40px, 4vw));
   color: #3282b8;
 }
 
@@ -378,14 +379,14 @@ body .main .card .card__content .card__back {
 
 body .main .button-card-active {
   height: 40px;
-  width: 150px;
+  width: 8vw;
   margin-top: 40px;
   background-color: #1b262c;
   border: none;
   -webkit-box-shadow: 0px 0px 0px 5px #0f4c75;
   box-shadow: 0px 0px 0px 5px #3282b8;
   font-family: "Rubik", sans-serif;
-  font-size: 1.2rem;
+  font-size: calc(max(14px, 1.1vw));
   letter-spacing: 0.1rem;
   color: #bbe1fa;
   border-radius: 35px;
@@ -398,12 +399,12 @@ body .main .button-card-active:hover {
 
 body .main .button-card-disabled {
   height: 40px;
-  width: 150px;
+  width: 8vw;
   margin-top: 40px;
   background-color: #1b262c;
   border: none;
   font-family: "Rubik", sans-serif;
-  font-size: 1.2rem;
+  font-size: calc(max(14px, 1.1vw));
   letter-spacing: 0.1rem;
   color: #bbe1fa;
   border-radius: 35px;
