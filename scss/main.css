@@ -224,7 +224,7 @@ body .main .high-scores .high-scores__grabber:focus {
 
 body .main .high-scores h2 {
   position: absolute;
-  top: 0;
+  top: 3%;
   font-size: 120%;
   font-style: italic;
 }
@@ -238,7 +238,7 @@ body .main .high-scores .divider {
 }
 
 body .main .high-scores .high-scores__names {
-  padding-top: 220px;
+  padding-top: 25%;
   padding-left: 10px;
   height: 95%;
   width: 65%;
@@ -251,7 +251,7 @@ body .main .high-scores .high-scores__names p {
 }
 
 body .main .high-scores .high-scores__points {
-  padding-top: 220px;
+  padding-top: 25%;
   height: 95%;
   width: 25%;
 }
@@ -617,10 +617,10 @@ body .main #button-card:focus {
     z-index: 5;
   }
   body .main .high-scores .high-scores__names {
-    padding-top: 30%;
+    padding-top: 10%;
   }
   body .main .high-scores .high-scores__points {
-    padding-top: 30%;
+    padding-top: 10%;
   }
   body .main .card {
     width: 40vw;
@@ -694,7 +694,7 @@ body .main #button-card:focus {
     margin: 0 10px 0 0;
   }
   body .header .score .player .player-badge {
-    top: 30px;
+    top: 45px;
     left: 10px;
   }
   body .header .score .player-value {
@@ -714,7 +714,7 @@ body .main #button-card:focus {
     margin: 0;
   }
   body .header .score .comp .comp-badge {
-    top: 30px;
+    top: 45px;
     left: 15px;
   }
   body .header .score .comp .comp-value {
@@ -754,10 +754,13 @@ body .main #button-card:focus {
             transform: translateY(-50%);
   }
   body .main .high-scores .high-scores__names {
-    padding-top: 40%;
+    padding-top: 15%;
   }
   body .main .high-scores .high-scores__points {
-    padding-top: 40%;
+    padding-top: 15%;
+  }
+  body .main .high-scores .divider {
+    margin-top: 5%;
   }
   body .main .card {
     height: 55vh;

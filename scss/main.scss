@@ -197,7 +197,7 @@ body {
 
 			h2 {
 				position: absolute;
-				top: 0;
+				top: 3%;
 				font-size: 120%;
 				font-style: italic;
 			}
@@ -211,7 +211,7 @@ body {
 			}
 
 			.high-scores__names {
-				padding-top: 220px;
+				padding-top: 25%;
 				padding-left: 10px;
 				height: 95%;
 				width: 65%;
@@ -224,7 +224,7 @@ body {
 			}
 
 			.high-scores__points {
-				padding-top: 220px;
+				padding-top: 25%;
 				height: 95%;
 				width: 25%;
 			}
@@ -494,11 +494,11 @@ body {
 				z-index: 5;
 
 				.high-scores__names {
-					padding-top: 30%;
+					padding-top: 10%;
 				}
 
 				.high-scores__points {
-					padding-top: 30%;
+					padding-top: 10%;
 				}
 			}
 
@@ -551,7 +551,7 @@ body {
 					height: 35%;
 					margin: 0 10px 0 0;
 					.player-badge {
-						top: 30px;
+						top: 45px;
 						left: 10px;
 					}
 				}
@@ -566,7 +566,7 @@ body {
 					height: 35%;
 					margin: 0;
 					.comp-badge {
-						top: 30px;
+						top: 45px;
 						left: 15px;
 					}
 
@@ -615,11 +615,15 @@ body {
 				}
 
 				.high-scores__names {
-					padding-top: 40%;
+					padding-top: 15%;
 				}
 
 				.high-scores__points {
-					padding-top: 40%;
+					padding-top: 15%;
+				}
+
+				.divider {
+					margin-top: 5%;
 				}
 			}
 
