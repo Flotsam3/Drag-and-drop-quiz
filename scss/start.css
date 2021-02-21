@@ -27,9 +27,10 @@ body .start {
 
 body .start h1 {
   position: absolute;
-  top: 50px;
+  top: calc(max(3%, 5vh));
   font-family: "Rubik", sans-serif;
-  font-size: 4rem;
+  font-size: calc(max(3rem, 5vw));
+  z-index: 5;
   -webkit-animation: title-anim 3s linear infinite;
           animation: title-anim 3s linear infinite;
 }
@@ -148,21 +149,25 @@ body .start .scene .cube .cube__side .level-selection h4 {
   color: #bbe1fa;
 }
 
-body .start .scene .cube .cube__side .level-selection label, body .start .scene .cube .cube__side .level-selection input {
+body .start .scene .cube .cube__side .level-selection label,
+body .start .scene .cube .cube__side .level-selection input {
   margin-bottom: 10px;
   margin-left: 10px;
   font-family: "Rubik", sans-serif;
   color: #bbe1fa;
 }
 
-body .start .scene .cube .cube__side .level-selection .level-easy, body .start .scene .cube .cube__side .level-selection .level-fair, body .start .scene .cube .cube__side .level-selection .level-challenging {
+body .start .scene .cube .cube__side .level-selection .level-easy,
+body .start .scene .cube .cube__side .level-selection .level-fair,
+body .start .scene .cube .cube__side .level-selection .level-challenging {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 150px;
 }
 
-body .start .scene .cube svg, body .start .scene .cube svg rect {
+body .start .scene .cube svg,
+body .start .scene .cube svg rect {
   position: absolute;
   top: 0;
   height: 100%;
@@ -187,17 +192,20 @@ body .start .scene .cube .cube--border {
   border: 2px solid #bbe1fa;
 }
 
-body .start .scene .cube .cube__side--front, body .start .scene .cube .cube__side--back {
+body .start .scene .cube .cube__side--front,
+body .start .scene .cube .cube__side--back {
   height: 300px;
   width: 300px;
 }
 
-body .start .scene .cube .cube__side--right, body .start .scene .cube .cube__side--left {
+body .start .scene .cube .cube__side--right,
+body .start .scene .cube .cube__side--left {
   height: 300px;
   width: 300px;
 }
 
-body .start .scene .cube .cube__side--top, body .start .scene .cube .cube__side--bottom {
+body .start .scene .cube .cube__side--top,
+body .start .scene .cube .cube__side--bottom {
   height: 300px;
   width: 300px;
 }
@@ -281,7 +289,9 @@ body .start .scene #name::placeholder {
   text-align: center;
 }
 
-body .start #button-start, body .start #button-submit-name, body .start #button-submit-level {
+body .start #button-start,
+body .start #button-submit-name,
+body .start #button-submit-level {
   height: 40px;
   width: 150px;
   background-color: #0f4c75;
@@ -296,12 +306,16 @@ body .start #button-start, body .start #button-submit-name, body .start #button-
   z-index: 1;
 }
 
-body .start #button-start:hover, body .start #button-submit-name:hover, body .start #button-submit-level:hover {
+body .start #button-start:hover,
+body .start #button-submit-name:hover,
+body .start #button-submit-level:hover {
   -webkit-box-shadow: 0px 0px 0px 5px #bbe1fa;
           box-shadow: 0px 0px 0px 5px #bbe1fa;
 }
 
-body .start #button-start:focus, body .start #button-submit-name:focus, body .start #button-submit-level:focus {
+body .start #button-start:focus,
+body .start #button-submit-name:focus,
+body .start #button-submit-level:focus {
   outline: 0;
 }
 
@@ -313,9 +327,9 @@ body .start .button-disabled {
 small {
   position: absolute;
   bottom: 0;
-  right: 0;
+  right: 1%;
   height: 50px;
-  width: 200px;
+  width: auto;
   font-family: "Rubik", sans-serif;
   font-size: 1rem;
   color: rgba(187, 225, 250, 0.15);
@@ -352,7 +366,7 @@ small {
 }
 
 .quiz-info .pane p {
-  padding: 40px 20px 20px 20px;
+  padding: 15% 20px 20px 20px;
   font-size: 1.3rem;
   line-height: 1.5rem;
   font-family: "Rubik", sans-serif;
@@ -569,6 +583,35 @@ small {
   100% {
     -webkit-transform: translateX(0px);
             transform: translateX(0px);
+  }
+}
+
+@media only screen and (max-device-width: 767px) and (orientation: portrait) {
+  body .start h1 {
+    top: 10%;
+    font-size: calc(max(1.5rem, 3vw));
+    z-index: 5;
+  }
+  body .start #button-start,
+  body .start #button-submit-name,
+  body .start #button-submit-level {
+    height: 30px;
+    width: 110px;
+    font-size: 1rem;
+  }
+  body .quiz-info .pane {
+    height: 450px;
+    width: 300px;
+  }
+  body .quiz-info .pane p {
+    padding: 50px 20px 0 20px;
+    font-size: 1rem;
+    line-height: 1.4rem;
+  }
+  body .quiz-info #button-info {
+    height: 30px;
+    width: 110px;
+    margin-top: 30px;
   }
 }
 /*# sourceMappingURL=start.css.map */
